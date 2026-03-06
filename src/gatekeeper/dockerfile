@@ -1,0 +1,12 @@
+# 🧊 CORE-COLD: Armadura para el Portero (C++)
+FROM gcc:latest
+
+# Instalamos las herramientas necesarias
+WORKDIR /app
+COPY gatekeeper.cpp .
+
+# Compilamos el código para máxima velocidad (Hierro)
+RUN g++ -o gatekeeper gatekeeper.cpp
+
+# El comando que arranca el escudo
+CMD ["./gatekeeper"]
